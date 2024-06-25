@@ -1,0 +1,443 @@
+_G.AutoExecuter = true
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+if _G.AutoExecuter == true then
+local ScriptSpawn = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+if ScriptSpawn then
+    ScriptSpawn([[
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+repeat wait() until game.Players.LocalPlayer
+wait(0.25)
+_G.AutoExecuter = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxGamer420/abc/main/abcd%20V2.1"))()
+    ]])
+end
+end
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Slap Battle badges giver omg", "DarkTheme")
+ 
+local Tab = Window:NewTab("Creator")
+local Section = Tab:NewSection("Created by probly and devson")
+local Section = Tab:NewSection("Our server: discord.gg/b3t4gDjenC")
+local Tab = Window:NewTab("BADGES")
+local Section = Tab:NewSection("ICE TRIALS BADGE")
+Section:NewButton("Get frostbite", "Teleport you to Ice Trials", function()
+    game:GetService("TeleportService"):Teleport(17290438723)
+end)
+Section:NewButton("click after teleport", "follow the instruction", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550.900757, 177.17775, 56.5281143, 0.372469068, 3.30462306e-08, 0.928044617, 7.37104735e-12, 1, -3.56114072e-08, -0.928044617, 1.32709888e-08, 0.372469068)
+end)
+local Section = Tab:NewSection("GET Ice Skate")
+Section:NewButton("just click very easy11!!", "instant badge omg", function()
+    game:GetService("ReplicatedStorage").IceSkate:FireServer("Freeze")
+end)
+local Section = Tab:NewSection("GET REDACTED BADGE!")
+Section:NewButton("5000+ SLAPS ONLY!. LEAVE WHEN U GOT IT", "you may die alot in order to get the badge", function()
+    if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 5000 then
+        Door = 0
+        for i = 1, 10 do
+        Door = Door + 1
+        firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.PocketDimension.Doors[Door].TouchInterest.Parent, 0)
+        firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.PocketDimension.Doors[Door].TouchInterest.Parent, 1)
+        wait(3.75)
+        end
+    end
+end)
+local Section = Tab:NewSection("i forgot what is the badge name")
+Section:NewButton("TELEPORT TO (i forgor badge name)", "wait 120 secs real", function()
+    if not workspace:FindFirstChild("Keypad") then
+        for _, server in ipairs(game.HttpService:JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+            if server.playing < server.maxPlayers and server.JobId ~= game.JobId then
+                game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, server.id)
+            end
+        end
+    else
+    local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+        task.wait(5)
+    Time = 121
+    fireclickdetector(game.Workspace.CounterLever.ClickDetector)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,100,0)
+    wait(0.2)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    for i = 1,Time do
+    Time = Time - 1
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You wait time [ "..Time.." ] receive.",Icon = "rbxassetid://7733658504",Duration = 2})
+    wait(1)
+    end
+    for i,v in pairs(workspace.Maze:GetDescendants()) do
+    if v:IsA("ClickDetector") then
+    fireclickdetector(v)
+    end
+    end
+        ]])
+    end
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Keypad.Buttons.Enter.CFrame
+    fireclickdetector(workspace:WaitForChild("Keypad").Buttons:FindFirstChild("Reset").ClickDetector)
+    local digits = tostring((#game.Players:GetPlayers()) * 25 + 1100 - 7)
+    for i = 1, #digits do
+    task.wait(0.8)
+    local digit = digits:sub(i, i)
+    fireclickdetector(workspace:WaitForChild("Keypad").Buttons:FindFirstChild(digit).ClickDetector)
+    end
+    task.wait(0.5)
+    fireclickdetector(workspace:WaitForChild("Keypad").Buttons:FindFirstChild("Enter").ClickDetector)
+    end
+end)
+local Section = Tab:NewSection("TELEPORT TO ADMIN")
+Section:NewButton("GET ADMIN GLOVE", "JUST DO IT", function()
+    game:GetService("ReplicatedStorage").RetroTP:FireServer()   
+    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+Notification:Notify(
+    {Title = "TELEPORTING", Description = "Teleporting in 5 seconds"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "default"}
+)
+end)
+Section:NewButton("CLICK AFTER ADMIN TELEPORT", "JUST DO IT", function()
+    local teleport_table = {
+        location1 = Vector3.new(499, 80, 52), -- your desired position
+    }
+    
+    local tween_s = game:GetService('TweenService')
+    local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+    
+    local lp = game.Players.LocalPlayer
+    
+    function bypass_teleport(v)
+        if lp.Character and 
+        lp.Character:FindFirstChild('HumanoidRootPart') then
+            local cf = CFrame.new(v)
+            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+            a:Play()
+            -- a.Completed:Wait()
+            -- print('Teleporting Done!')
+        end
+    end
+    
+    bypass_teleport(teleport_table.location1)
+wait(2)
+    local teleport_table = {
+        location1 = Vector3.new(498, 81, 79), -- your desired position
+    }
+    
+    local tween_s = game:GetService('TweenService')
+    local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+    
+    local lp = game.Players.LocalPlayer
+    
+    function bypass_teleport(v)
+        if lp.Character and 
+        lp.Character:FindFirstChild('HumanoidRootPart') then
+            local cf = CFrame.new(v)
+            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+            a:Play()
+            -- a.Completed:Wait()
+            -- print('Teleporting Done!')
+        end
+    end
+    
+    bypass_teleport(teleport_table.location1)
+
+    
+end)
+
+local Section = Tab:NewSection("GET PLANK BADGE")
+Section:NewButton("EQUIP FORD!", "u need 1000 slaps noob", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 97, 4)
+    wait(0.2)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    wait(0.3)
+    game:GetService("ReplicatedStorage").Fortlol:FireServer()
+    wait(3.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 106, -6)
+end)
+local Section = Tab:NewSection("get random badge")
+Section:NewButton("just click", "u need nothing", function()
+    fireclickdetector(game.Workspace.Lobby.Scene.knofe.ClickDetector)
+fireclickdetector(game.Workspace.Arena.island5.Orange.ClickDetector) 
+fireclickdetector(game.Workspace.Arena["default island"]["Rubber Ducky"].ClickDetector)
+end)
+local Section = Tab:NewSection("get lamp badge")
+Section:NewButton("USE ZZZZZ AND USE THE ABILITY", "U NEED TO USE THE ABILITY", function()
+    game:GetService("ReplicatedStorage").nightmare:FireServer("LightBroken")
+end)
+
+
+local Tab = Window:NewTab("TELEPORT")
+local Section = Tab:NewSection("server hop")
+Section:NewButton("server hop", "u need nothing", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-803, 327, -21)
+end)
+local Section = Tab:NewSection("Teleport to end obby")
+Section:NewButton("show map", "u need nothing", function()
+    game.ReplicatedStorage.Assets.Retro.Parent = game.workspace
+end)
+    Section:NewButton("click after show map", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-27784, 168, 4833)
+end)
+local Section = Tab:NewSection("Teleport to portal (limbo)")
+Section:NewButton("show map", "u need nothing", function()
+    game.ReplicatedStorage.RepressedMemoriesMap.Parent = game.Workspace
+end)
+    Section:NewButton("click after show map", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.RepressedMemories.Limbo.CFrame * CFrame.new(0,-5,0)
+end)
+local Section = Tab:NewSection("Teleport to mr.president")
+Section:NewButton("show map", "u need nothing", function()
+    game.ReplicatedStorage.Assets.Pocket.RoomTemplate.Parent = game.Workspace
+end)
+Section:NewButton("click after show map", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-151, 370, 85)
+end)
+local Section = Tab:NewSection("Teleport to redacted place")
+Section:NewButton("just click", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-73, -28154, -0)
+end)
+local Section = Tab:NewSection("Teleport to plate")
+Section:NewButton("just click", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Workspace.Arena.Plate.Position)
+end)
+local Section = Tab:NewSection("Teleport to castle")
+Section:NewButton("just click", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(306, 21, 220)
+end)
+local Section = Tab:NewSection("Teleport to default island")
+Section:NewButton("just click", "u need nothing", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-401, 51, -9)
+end)
+
+local Tab = Window:NewTab("TELEPORT PLAYERS")
+local Section = Tab:NewSection("KICK PLAYER (BRAZIL) (RECALL)")
+Section:NewTextBox("PUT FULL USER", "if error then player not found.", function(value)
+fireclickdetector(workspace.Lobby.Recall.ClickDetector)
+wait(0.3)
+local LPLR = game:GetService("Players").LocalPlayer
+local char = LPLR.Character or LPLR.CharacterAdded:Wait()
+local hrm = char:WaitForChild("HumanoidRootPart")
+local tp1 = workspace.Lobby.Teleport1
+
+local function touchPart(part, otherPart, state)
+	if type(firetouchinterest)=="function" then
+		firetouchinterest(part,otherPart,state or 0)
+		if not state then firetouchinterest(part,otherPart,1) end
+	end
+	part.CFrame = otherPart.CFrame
+end
+
+while not char:FindFirstChild("entered") do
+	touchPart(tp1,hrm)
+	task.wait()
+end
+	local VoidPart = Instance.new("Part", workspace)
+    VoidPart.Position = Vector3.new(-724, 307, -3)
+    VoidPart.Size = Vector3.new(50,1,50)
+    VoidPart.Anchored = true
+    VoidPart.Transparency = 0.3
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-725, 312, 1)
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    wait(0.6)
+    game:GetService("ReplicatedStorage").Recall:InvokeServer(game:GetService("Players").LocalPlayer.Character.Recall)
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+    wait(1.3)
+    local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local p2 = value
+
+    p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+end)
+local Section = Tab:NewSection("KICK PLAYER (SLAP ROYALE) (RECALL)")
+Section:NewTextBox("PUT FULL USER", "if error then player not found.", function(value)
+fireclickdetector(workspace.Lobby.Recall.ClickDetector)
+wait(0.2)
+local LPLR = game:GetService("Players").LocalPlayer
+local char = LPLR.Character or LPLR.CharacterAdded:Wait()
+local hrm = char:WaitForChild("HumanoidRootPart")
+local tp1 = workspace.Lobby.Teleport1
+
+local function touchPart(part, otherPart, state)
+	if type(firetouchinterest)=="function" then
+		firetouchinterest(part,otherPart,state or 0)
+		if not state then firetouchinterest(part,otherPart,1) end
+	end
+	part.CFrame = otherPart.CFrame
+end
+
+while not char:FindFirstChild("entered") do
+	touchPart(tp1,hrm)
+	task.wait()
+end
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-803, 327, 18)
+    wait(0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    wait(0.4)
+    game:GetService("ReplicatedStorage").Recall:InvokeServer(game:GetService("Players").LocalPlayer.Character.Recall)
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+    wait(1.6)
+    local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local p2 = value
+
+    p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+end)
+Section:NewButton("CLICK THIS ONCE BEFORE KICKING", "kicking go brrrrr", function()
+    Workspace.Lobby.Teleport4:Destroy()
+end)
+
+local Section = Tab:NewSection("BRING PLAYER TO HITMAN (GRAB GLOVE)")
+
+Section:NewTextBox("PUT FULL USER", "if error then player not found.", function(value)
+    fireclickdetector(workspace.Lobby.Grab.ClickDetector) 
+    wait(0.2)
+    local LPLR = game:GetService("Players").LocalPlayer
+local char = LPLR.Character or LPLR.CharacterAdded:Wait()
+local hrm = char:WaitForChild("HumanoidRootPart")
+local tp1 = workspace.Lobby.Teleport1
+
+local function touchPart(part, otherPart, state)
+	if type(firetouchinterest)=="function" then
+		firetouchinterest(part,otherPart,state or 0)
+		if not state then firetouchinterest(part,otherPart,1) end
+	end
+	part.CFrame = otherPart.CFrame
+end
+
+while not char:FindFirstChild("entered") do
+	touchPart(tp1,hrm)
+	task.wait()
+end
+    local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local p2 = value
+
+    p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17895, -130, -3531)
+end)
+
+local Section = Tab:NewSection("BRING PLAYER BACK TO ARENA (AFTER HITMAN)")
+
+Section:NewTextBox("PUT FULL USER", "if error then player not found.", function(value)
+    wait(0.2)
+    local LPLR = game:GetService("Players").LocalPlayer
+local char = LPLR.Character or LPLR.CharacterAdded:Wait()
+local hrm = char:WaitForChild("HumanoidRootPart")
+local tp1 = workspace.Lobby.Teleport1
+
+local function touchPart(part, otherPart, state)
+	if type(firetouchinterest)=="function" then
+		firetouchinterest(part,otherPart,state or 0)
+		if not state then firetouchinterest(part,otherPart,1) end
+	end
+	part.CFrame = otherPart.CFrame
+end
+
+while not char:FindFirstChild("entered") do
+	touchPart(tp1,hrm)
+	task.wait()
+end
+    local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local p2 = value
+
+    p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9, -5, 46)
+end)
+
+local Tab = Window:NewTab("TROLLING")
+local Section = Tab:NewSection("Spoonful abuse")
+Section:NewButton("CLICK ME (NEED SPOONFUL)", "follow the instruction grr", function()
+    local args = {
+        [1] = {
+            ["state"] = "vfx",
+            ["vfx"] = "jumpvfx"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer(unpack(args))
+end)
+local Section = Tab:NewSection("LAG SERVER")
+Section:NewButton("CLICK ME (NEED SPOONFUL)", "follow the instruction grr", function()
+while true do
+    task.wait(0.0000001)
+    local args = {
+        [1] = {
+            ["state"] = "vfx",
+            ["vfx"] = "jumpvfx"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer(unpack(args))
+end
+end)
+local Section = Tab:NewSection("SPAWN GOLEM NO COOLDOWN")
+Section:NewButton("spawn golem", "just do it", function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
+
+local Section = Tab:NewSection("SPAWN UFO NO COOLDOWN")
+Section:NewButton("spawn UFO", "just do it", function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
+
+local Section = Tab:NewSection("SPAM METEOR NO COOLDOWN")
+Section:NewButton("spam meteor", "just do it", function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
+
+local Section = Tab:NewSection("DEFENSE GLOVE ABUSE")
+Section:NewButton("spam yessir", "just do it", function()
+	game.ReplicatedStorage.Barrier:FireServer()
+end)
+
+local Tab = Window:NewTab("SETTINGS")
+local Section = Tab:NewSection("KEYBIND GUI")
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+    end)
+
+local Tab = Window:NewTab("FARMING")
+local Section = Tab:NewSection("DEFENSE GLOVE ABUSE")
+Section:NewButton("get all slapples", "replica go brrrrr", function()
+if not game:IsLoaded() then game.Loaded:Wait() end
+local LPLR = game:GetService("Players").LocalPlayer
+local char = LPLR.Character or LPLR.CharacterAdded:Wait()
+local hrm = char:WaitForChild("HumanoidRootPart")
+local tp1 = workspace.Lobby.Teleport1
+
+local function touchPart(part, otherPart, state)
+	if type(firetouchinterest)=="function" then
+		firetouchinterest(part,otherPart,state or 0)
+		if not state then firetouchinterest(part,otherPart,1) end
+	end
+	part.CFrame = otherPart.CFrame
+end
+
+while not char:FindFirstChild("entered") do
+	touchPart(tp1,hrm)
+	task.wait()
+end
+
+for _,v in workspace.Arena.island5.Slapples:GetDescendants() do
+	if v.Name=="Glove" and v:FindFirstChild("TouchInterest") then
+		touchPart(v,hrm)
+    end
+end
+end)
